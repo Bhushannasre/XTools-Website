@@ -1,33 +1,16 @@
-import {xData} from '.../utils/Data';
+import './home.css';
+import { xData } from "../utils/Data";
+import { cardsData } from "../utils/cardData";
+import { ButtonFeature } from './buttonfeature';
+
+import Brands from './Brands';  
+
 function Home() {
-    const cardsData = [
-        {
-            image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
-            name: 'Briar Martin',
-            handle: '@neilstellar',
-            date: 'April 20, 2025'
-        },
-        {
-            image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200',
-            name: 'Avery Johnson',
-            handle: '@averywrites',
-            date: 'May 10, 2025'
-        },
-        {
-            image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60',
-            name: 'Jordan Lee',
-            handle: '@jordantalks',
-            date: 'June 5, 2025'
-        },
-        {
-            image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60',
-            name: 'Avery Johnson',
-            handle: '@averywrites',
-            date: 'May 10, 2025'
-        },
-    ];
+    
+
+  
     const CreateCard = ({ card }) => (
-        <div className="p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+        <div className="p-4 rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0 bg-[#202829]">
             <div className="flex gap-2">
                 <img className="size-11 rounded-full" src={card.image} alt="User Image" />
                 <div className="flex flex-col">
@@ -57,29 +40,84 @@ function Home() {
     );
 
     return (
-        <><div className="w-full h-screen flex items-center justify-center bg-gray-100">
-            <img src="logo2.jpg" alt="" className="w-400 " />
+       <div className="relative overflow-hidden bg-black">
+  {/* SVG BACKGROUND */}
+  <svg
+    className="absolute inset-0 z-0"
+    viewBox="0 0 1440 720"
+    fill="none"
+  >
+    <path stroke="#28834c" strokeOpacity=".7" d="M-15.227 702.342H1439.7" />
+    <circle cx="711.819" cy="372.562" r="308.334" stroke="#229b59" strokeOpacity=".7" />
+    <circle cx="16.942" cy="20.834" r="308.334" stroke="#299253" strokeOpacity=".7" />
+  </svg>
+
+  {/* CONTENT */}
+  <section className="relative z-10 flex flex-col md:flex-row pb-20 items-center justify-between mt-30 px-4 md:px-16 lg:px-24 xl:px-32 text-white box">
+    <div className="max-w-xl text-center md:text-left">
+      <h1 className="text-5xl md:text-6xl font-medium ">
+        Plug and Play with X2LS.
+      </h1>
+       <div className="flex items-center divide-x divide-gray-300 mt-6">
+            <div className="flex -space-x-3 pr-3">
+                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200" alt="image" className="w-12 h-12 rounded-full border-2 border-white hover:-translate-y-1 transition z-1 hover:z-10" />
+                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200" alt="image" className="w-12 h-12 rounded-full border-2 border-white hover:-translate-y-1 transition z-2 hover:z-10" />
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop" alt="image" className="w-12 h-12 rounded-full border-2 border-white hover:-translate-y-1 transition z-3 hover:z-10" />
+                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="image" className="w-12 h-12 rounded-full border-2 border-white hover:-translate-y-1 transition z-4 hover:z-10" />
+            </div>
+            <div className="pl-3">
+                <div className="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FACC15" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FACC15" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FACC15" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FACC15" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FACC15" stroke="#FACC15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/>
+                    </svg>
+                    <p className="text-gray-600 font-medium ml-2">5.0</p>
+                </div>
+                <p className="text-sm text-gray-500">Trusted by <span className="font-medium text-green-300">100,000+</span> users</p>
+            </div>
         </div>
-        <div
-            className="flex flex-col gap-8 my-16 bg-black">
-                <style>{`
-            @keyframes marqueeScroll {
-                0% { transform: translateX(0%); }
-                100% { transform: translateX(-50%); }
-            }
+      <p className="text-sm text-slate-200 mt-4">
+        Unlock smarter Music AI Integrated Music Plugins to make your music creation process more efficient and enjoyable.
+      </p>
 
-            .marquee-inner {
-                animation: marqueeScroll 25s linear infinite;
-            }
+      <div className="flex gap-4 mt-8 justify-center md:justify-start">
+        <button className="bg-white text-black px-7 h-11 rounded-md cursor-pointer">
+          Get started
+        </button>
+        <button className="border border-slate-600 px-6 h-11 rounded-md cursor-pointer">
+          Watch demo
+        </button>
+      </div>
+     <Brands />
+    </div>
 
-            .marquee-reverse {
-                animation-direction: reverse;
-            }
-        `}</style>
-
+    <img
+      src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/hero/hero-section-showcase-3.png"
+      alt="hero"
+      className="max-w-xs sm:max-w-sm lg:max-w-md mt-10 md:mt-0"
+    />
+  
+{/* Testionials on X */}
+      </section>
+        <div className="flex flex-col gap-8  bg-black mt-30 pb-20">         
+                  <h1 className="text-3xl font-semibold text-center mx-auto text-white heading animate">Testimonials on X</h1>
+            <p className="text-sm text-slate-400 text-center mt-2 max-w-lg mx-auto">Hear what our satisfied users have to say about their experiences with our products and services.
+               </p>
+            
                 <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative ">
                     <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"></div>
-                    <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5">
+                    <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5 text-green-500">
                         {[...cardsData, ...cardsData].map((card, index) => (
                             <CreateCard key={index} card={card} />
                         ))}
@@ -89,7 +127,7 @@ function Home() {
 
                 <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
                     <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"></div>
-                    <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%] pt-10 pb-5">
+                    <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%] pt-10 pb-5  text-green-500">
                         {[...cardsData, ...cardsData].map((card, index) => (
                             <CreateCard key={index} card={card} />
                         ))}
@@ -97,7 +135,7 @@ function Home() {
                     <div className="absolute right-0 top-0 h-full w-20 md:w-40 z-10 pointer-events-none bg-gradient-to-l from-black to-transparent"></div>
                 </div>
             </div>
-            <>
+            < div className="bg-black py-20">
             <style>{`
                 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
             
@@ -105,48 +143,56 @@ function Home() {
                     font-family: 'Poppins', sans-serif;
                 }
             `}</style>
-            
-            <h1 className="text-3xl font-semibold text-center mx-auto">Our Latest Creations</h1>
-            <p className="text-sm text-slate-500 text-center mt-2 max-w-lg mx-auto">A visual collection of our most recent works -
+
+            {/* About Product */}
+            <h1 className="text-3xl font-semibold text-center mx-auto text-white heading animate">Our Latest Creations</h1>
+            <p className="text-sm text-slate-400 text-center mt-2 max-w-lg mx-auto ">A visual collection of our most recent works -
                 each piece crafted with intention, emotion, and style.</p>
             
             <div className="flex items-center gap-6 h-[400px] w-full max-w-5xl mt-10 mx-auto">
-                <div className="relative group flex-grow transition-all w-56 h-[400px] duration-500 hover:w-full">
-                    <img className="h-full w-full object-cover object-center"
-                        src="xvox.png"
-                        alt="image" />
-                    <div
-                        className="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <h1 className="text-3xl">Prompt engineers</h1>
-                        <p className="text-sm">Bridging the gap between human intent and machine understanding through expert prompt design.</p>
-            
-                    </div>
-                </div>
+    
                 <div className="relative group flex-grow transition-all w-56 h-[400px] duration-500 hover:w-full">
                     <img className="h-full w-full object-cover object-right"
                         src={xData[0].image}
                         alt="image" />
+                        
                     <div
-                        className="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <h1 className="text-3xl">Data scientists</h1>
-                        <p className="text-sm">Bridging the gap between human intent and machine understanding through expert prompt design.</p>
-            
+                        className="absolute inset-0 flex flex-col justify-center p-10 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <h1 className="text-3xl">{xData[0].title}</h1>
+                        <p className="text-sm">{xData[0].description}</p>
+                       <div className="mt-3" >
+                        <ButtonFeature onClick/>
+                         </div>
+                       
                     </div>
                 </div>
                 <div className="relative group flex-grow transition-all w-56 h-[400px] duration-500 hover:w-full">
                     <img className="h-full w-full object-cover object-center"
-                        src="https://images.unsplash.com/photo-1736220690062-79e12ca75262?q=80&w=800&h=400&auto=format&fit=crop"
+                        src={xData[1].image}
                         alt="image" />
                     <div
-                        className="absolute inset-0 flex flex-col justify-end p-10 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <h1 className="text-3xl">Software engineers</h1>
-                        <p className="text-sm">Bridging the gap between human intent and machine understanding through expert prompt design.</p>
+                        className="absolute inset-0 flex flex-col justify-center p-10 text-white bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <h1 className="text-3xl">{xData[1].title}</h1>
+                        <p className="text-sm">{xData[1].description}</p>
+                        <div className="mt-3">
+                          <ButtonFeature />
+                         </div>
             
                     </div>
                 </div>
             </div>
-        </>
-            </>
+             <section className="flex flex-col items-center text-white mt-10">
+            <div className="flex flex-col items-center">
+                <h2 className="text-center text-4xl font-semibold max-w-2xl">Subscribe <span className="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">newsletter</span></h2>
+                <p className="text-center text-slate-400 max-w-lg mt-3">Stay updated with our latest news and releases related to x2LS.com.</p>
+            </div>
+            <div className="flex items-center justify-center mt-10 border border-slate-700 focus-within:outline focus-within:outline-indigo-600 text-sm rounded-full h-14 max-w-xl w-full">
+                <input className="bg-transparent outline-none rounded-full px-4 h-full flex-1 placeholder:text-slate-400" placeholder="Enter your email address" type="text" />
+                <button className="bg-indigo-600 text-white rounded-full h-11 mr-1 px-10 flex items-center justify-center hover:bg-indigo-700 active:scale-95 transition">Subscribe</button>
+            </div>
+        </section>
+        </div>
+            </div>
             
             
             

@@ -1,13 +1,8 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
-@layer base {
-  body {
-	font-family: "Outfit", sans-serif;
-  }
-}
-
- @keyframes rotate {
+export const ButtonFeature = () => {
+    return (
+        <>
+            <style>{`
+                @keyframes rotate {
                     100% {
                         transform: rotate(1turn);
                     }
@@ -28,3 +23,12 @@
                     background-image: linear-gradient(#FFF);
                     animation: rotate 4s linear infinite;
                 }
+            `}</style>
+            <div className="rainbow absolute  overflow-hidden p-0.5 flex items-center justify-center rounded-full hover:scale-105 transition duration-300 active:scale-100 ">
+                <button className="px-8 text-sm py-3 text-white rounded-full font-medium bg-gray-900/80 backdrop-blur">
+                    Explore Plugin
+                </button>
+            </div>
+        </>
+    );
+};
