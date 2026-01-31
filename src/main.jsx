@@ -8,7 +8,7 @@ import Home from './components/Home.jsx'
 import About from './components/About.jsx'
 import Contact from './components/Contact.jsx'
 import Services from './components/Services.jsx'
-
+import Xvox from './pages/Xvox.jsx'
 const router = createBrowserRouter([
 {
     path: "/",
@@ -19,6 +19,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "services", element: <Services /> },
       { path: "contact", element: <Contact /> },
+      { path: "/product/:id=0" , element: <Xvox/>}
     ],
   },
 ]);

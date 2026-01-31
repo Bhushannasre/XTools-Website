@@ -40,7 +40,8 @@ function Home() {
     );
 
     return (
-       <div className="relative overflow-hidden bg-black">
+     
+       <div className="relative overflow-hidden bg-black ">
   {/* SVG BACKGROUND */}
   <svg
     className="absolute inset-0 z-0"
@@ -48,11 +49,14 @@ function Home() {
     fill="none"
   >
     <path stroke="#28834c" strokeOpacity=".7" d="M-15.227 702.342H1439.7" />
-    <circle cx="711.819" cy="372.562" r="308.334" stroke="#229b59" strokeOpacity=".7" />
-    <circle cx="16.942" cy="20.834" r="308.334" stroke="#299253" strokeOpacity=".7" />
+    <circle cx="711.819" cy="372.562" r="308.334" stroke=" #00c2cb" strokeOpacity=".7" />
+     <circle cx="1372.48" cy="618.205" r="308.334" stroke="#FF5722" strokeOpacity=".7" />
+    <circle cx="16.942" cy="20.834" r="308.334" stroke="#bcef14ed" strokeOpacity=".7" />
+
   </svg>
 
   {/* CONTENT */}
+     <div className='fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none mb-10 size-140  rounded-full blur-[200px]'></div>
   <section className="relative z-10 flex flex-col md:flex-row pb-20 items-center justify-between mt-30 px-4 md:px-16 lg:px-24 xl:px-32 text-white box">
     <div className="max-w-xl text-center md:text-left">
       <h1 className="text-5xl md:text-6xl font-medium ">
@@ -107,17 +111,17 @@ function Home() {
       alt="hero"
       className="max-w-xs sm:max-w-sm lg:max-w-md mt-10 md:mt-0"
     />
-  
+
 {/* Testionials on X */}
       </section>
-        <div className="flex flex-col gap-8  bg-black mt-30 pb-20">         
+        <div className="flex flex-col gap-8 pb-20">         
                   <h1 className="text-3xl font-semibold text-center mx-auto text-white heading animate">Testimonials on X</h1>
             <p className="text-sm text-slate-400 text-center mt-2 max-w-lg mx-auto">Hear what our satisfied users have to say about their experiences with our products and services.
                </p>
             
                 <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative ">
                     <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"></div>
-                    <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5 text-green-500">
+                    <div className="marquee-inner flex transform-gpu min-w-[200%] pt-10 pb-5  text-[#00c2cb]">
                         {[...cardsData, ...cardsData].map((card, index) => (
                             <CreateCard key={index} card={card} />
                         ))}
@@ -127,7 +131,7 @@ function Home() {
 
                 <div className="marquee-row w-full mx-auto max-w-5xl overflow-hidden relative">
                     <div className="absolute left-0 top-0 h-full w-20 z-10 pointer-events-none bg-gradient-to-r from-black to-transparent"></div>
-                    <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%] pt-10 pb-5  text-green-500">
+                    <div className="marquee-inner marquee-reverse flex transform-gpu min-w-[200%] pt-10 pb-5  text-[#00c2cb]">
                         {[...cardsData, ...cardsData].map((card, index) => (
                             <CreateCard key={index} card={card} />
                         ))}
@@ -183,12 +187,12 @@ function Home() {
             </div>
              <section className="flex flex-col items-center text-white mt-10">
             <div className="flex flex-col items-center">
-                <h2 className="text-center text-4xl font-semibold max-w-2xl">Subscribe <span className="bg-gradient-to-t from-indigo-600 to-black p-1 bg-left inline-block bg-no-repeat">newsletter</span></h2>
+                <h2 className="text-center text-4xl font-semibold max-w-2xl  ">Subscribe <span className="bg-gradient-to-t from-red-600 to-black p-1 bg-left inline-block bg-no-repeat">newsletter</span></h2>
                 <p className="text-center text-slate-400 max-w-lg mt-3">Stay updated with our latest news and releases related to x2LS.com.</p>
             </div>
-            <div className="flex items-center justify-center mt-10 border border-slate-700 focus-within:outline focus-within:outline-indigo-600 text-sm rounded-full h-14 max-w-xl w-full">
+            <div className="flex items-center justify-center mt-10 border border[#202829] focus-within:outline focus-within:outline-indigo-600 text-sm rounded-full h-14 max-w-xl w-full">
                 <input className="bg-transparent outline-none rounded-full px-4 h-full flex-1 placeholder:text-slate-400" placeholder="Enter your email address" type="text" />
-                <button className="bg-indigo-600 text-white rounded-full h-11 mr-1 px-10 flex items-center justify-center hover:bg-indigo-700 active:scale-95 transition">Subscribe</button>
+                <button className="bg-[#00c2cb] text-black rounded-full h-11 mr-1 px-10 flex items-center justify-center hover:bg-gray-300 active:scale-95 transition">Subscribe</button>
             </div>
         </section>
         </div>
